@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff7f9">
+  <title>Thiệp mời cưới</title>
+  <script>
+    (function () {
+      if (new URLSearchParams(window.location.search).get("open") !== "1") {
+        window.location.replace("index.html");
+        return;
+      }
+      window.history.replaceState(null, "", window.location.pathname);
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css?v=41">
+  <script src="config.js?v=18" defer></script>
+  <script src="script.js?v=18" defer></script>
+</head>
+<body class="invitation-page">
+  <div class="petal-layer" aria-hidden="true">
+    <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+    <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+    <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+    <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+    <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+    <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+  </div>
+  <main id="dau-trang">
+    <header class="interior-hero" aria-labelledby="interior-couple-names">
+      <figure class="interior-cover-photo photo">
+        <img id="interior-cover-image" alt="Ảnh cưới của Tuấn Tú và Minh Ánh">
+        <figcaption aria-hidden="true">Ảnh cưới</figcaption>
+      </figure>
+      <div class="interior-hero-content">
+        <p class="eyebrow">The Wedding Of</p>
+        <h1 class="interior-couple-names" id="interior-couple-names">
+          <span data-field="groom"></span><i>&amp;</i><span data-field="bride"></span>
+        </h1>
+        <p class="interior-hero-date" id="interior-hero-date"></p>
+        <p class="lunar-date" data-field="lunarDate"></p>
+      </div>
+    </header>
+    <section class="story-intro" aria-labelledby="story-title">
+      <h2 class="story-title" id="story-title">Ngày Chung Đôi</h2>
+      <p class="story-date" id="story-date"></p>
+      <p class="story-copy">Chúng tôi đã cùng nhau viết nên câu chuyện tình yêu suốt thời gian qua... và chương tiếp theo sẽ bắt đầu về sau.</p>
+      <figure class="story-photo photo">
+        <img id="story-image" alt="Ảnh cưới của Tuấn Tú và Minh Ánh">
+        <figcaption>Ảnh cưới</figcaption>
+      </figure>
+    </section>
+    <section class="ceremony-card" aria-labelledby="ceremony-names">
+      <div class="ceremony-families">
+        <div>
+          <p class="ceremony-family-title">NHÀ TRAI</p>
+          <p class="ceremony-family-address" id="groom-family-address"></p>
+        </div>
+        <div>
+          <p class="ceremony-family-title">NHÀ GÁI</p>
+          <p class="ceremony-family-address" id="bride-family-address"></p>
+        </div>
+      </div>
+      <div class="ceremony-couple">
+        <span class="double-happiness" aria-hidden="true">囍</span>
+        <h2 class="ceremony-names" id="ceremony-names">
+          <span data-field="groom"></span><i>&amp;</i><span data-field="bride"></span>
+        </h2>
+      </div>
+      <p class="ceremony-invitation">TRÂN TRỌNG KÍNH MỜI</p>
+      <p class="ceremony-guest">QUÝ KHÁCH</p>
+      <p class="ceremony-event">DỰ BỮA TIỆC CHUNG VUI</p>
+      <p class="ceremony-weekday" id="ceremony-weekday"></p>
+      <p class="ceremony-date" id="ceremony-date"></p>
+      <p class="ceremony-lunar" data-field="lunarDate"></p>
+    </section>
+    <div class="chibi-transition" aria-hidden="true">
+      <img src="assets/images/chibi.jpg" alt="" width="160" height="160" loading="lazy" decoding="async">
+    </div>
+    <section class="wedding-schedule" aria-labelledby="wedding-schedule-title">
+      <div class="wedding-schedule-content">
+        <h2 class="wedding-schedule-title" id="wedding-schedule-title">DỰ LỄ THÀNH HÔN</h2>
+        <p class="wedding-schedule-time">ĐƯỢC TỔ CHỨC VÀO LÚC <span id="schedule-time"></span>, <span id="schedule-weekday"></span></p>
+        <p class="wedding-schedule-date" id="schedule-date"></p>
+        <p class="wedding-schedule-lunar" id="schedule-lunar"></p>
+        <h3 class="wedding-schedule-venue">TẠI TƯ GIA NHÀ TRAI</h3>
+        <p class="wedding-schedule-address" id="schedule-address"></p>
+      </div>
+    </section>
+    <section class="couple section" id="couple" aria-label="Chú rể và cô dâu">
+      <figure class="couple-hero-photo photo">
+        <img id="couple-hero-image" alt="Ảnh cưới của Tuấn Tú và Minh Ánh">
+        <figcaption>Ảnh cưới đôi</figcaption>
+      </figure>
+      <div class="couple-profiles">
+        <article class="person-card person-card--groom">
+          <figure class="person-photo photo">
+            <img data-person-image="groomPhoto" alt="Chú rể Tuấn Tú">
+          </figure>
+          <div class="person-info">
+            <p class="eyebrow">Chú Rể</p>
+            <h3 data-field="groom"></h3>
+          </div>
+        </article>
+        <article class="person-card person-card--bride">
+          <figure class="person-photo photo">
+            <img data-person-image="bridePhoto" alt="Cô dâu Minh Ánh">
+          </figure>
+          <div class="person-info">
+            <p class="eyebrow">Cô Dâu</p>
+            <h3 data-field="bride"></h3>
+          </div>
+        </article>
+      </div>
+      <div class="countdown-panel">
+        <p class="eyebrow">Đếm ngược đến ngày 22.01.2027</p>
+        <div id="countdown" class="countdown" role="timer" aria-label="Đếm ngược đến ngày 22 tháng 1 năm 2027" aria-live="off" hidden>
+          <div class="countdown-unit"><span class="countdown-value" data-countdown-part="days">0</span><span class="countdown-label">Ngày</span></div>
+          <div class="countdown-unit"><span class="countdown-value" data-countdown-part="hours">00</span><span class="countdown-label">Giờ</span></div>
+          <div class="countdown-unit"><span class="countdown-value" data-countdown-part="minutes">00</span><span class="countdown-label">Phút</span></div>
+          <div class="countdown-unit"><span class="countdown-value" data-countdown-part="seconds">00</span><span class="countdown-label">Giây</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="album section" aria-labelledby="album-title">
+      <div class="section-mark" aria-hidden="true">✳</div>
+      <p class="eyebrow">Lưu giữ những khoảnh khắc</p>
+      <h2 id="album-title">Album cưới</h2>
+      <p class="album-intro">Thêm những bức ảnh yêu thích để cùng nhìn lại hành trình của chúng mình.</p>
+      <div class="gallery" id="gallery"></div>
+    </section>
+    <section class="rsvp section" aria-labelledby="rsvp-title">
+      <p class="eyebrow">Rất mong được gặp bạn</p>
+      <h2 id="rsvp-title">Xác nhận tham dự</h2>
+      <p class="rsvp-intro">Hãy cho chúng mình biết bạn có thể tham dự và gửi lời chúc nhé.</p>
+      <form class="rsvp-form" id="rsvp-form">
+        <label class="rsvp-field">
+          <span>Tên khách mời</span>
+          <input name="name" type="text" autocomplete="name" maxlength="80" required>
+        </label>
+        <fieldset class="rsvp-attendance">
+          <legend>Bạn có thể tham dự không?</legend>
+          <label><input name="attendance" type="radio" value="yes" required> Có, mình sẽ tham dự</label>
+          <label><input name="attendance" type="radio" value="no"> Xin lỗi, mình không thể tham dự</label>
+        </fieldset>
+        <label class="rsvp-field">
+          <span>Lời chúc tới cô dâu và chú rể</span>
+          <textarea name="wish" rows="4" maxlength="500"></textarea>
+        </label>
+        <button class="button" type="submit">Gửi xác nhận</button>
+      </form>
+      <div class="rsvp-responses" id="rsvp-responses" aria-live="polite" aria-relevant="additions"></div>
+    </section>
+    <section class="gift-section" aria-labelledby="gift-title">
+      <h2 id="gift-title">Hộp mừng cưới</h2>
+      <p class="gift-intro">Xin được cảm ơn tình cảm của mọi người!</p>
+      <div class="gift-options">
+        <div class="gift-option">
+          <button class="gift-box" type="button" data-qr-field="groomQr" data-qr-label="Mã QR Nhà trai" aria-label="Mở mã QR Nhà trai">
+            <span aria-hidden="true">🎁</span>
+          </button>
+          <p class="gift-label">Nhà trai</p>
+        </div>
+        <div class="gift-option">
+          <button class="gift-box" type="button" data-qr-field="brideQr" data-qr-label="Mã QR Nhà gái" aria-label="Mở mã QR Nhà gái">
+            <span aria-hidden="true">🎁</span>
+          </button>
+          <p class="gift-label">Nhà gái</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p class="eyebrow">Rất mong được đón bạn</p>
+    <p class="sign"><span data-field="groom"></span> &amp; <span data-field="bride"></span></p>
+    <a class="back-to-top" href="#dau-trang">Trở về đầu trang ↑</a>
+  </footer>
+  <audio id="music" loop preload="none"></audio>
+  <button class="music button" id="music-toggle" type="button" aria-pressed="false">
+    <span class="music-icon" aria-hidden="true">♫</span>
+    <span class="music-label">Nhạc cưới</span>
+    <span class="music-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+  </button>
+  <p id="music-status" class="notice" role="status" hidden></p>
+  <dialog id="viewer" aria-label="Xem ảnh">
+    <button class="button" id="close-viewer" type="button">Đóng ×</button>
+    <img id="large-image" alt="">
+  </dialog>
+</body>
+</html>
